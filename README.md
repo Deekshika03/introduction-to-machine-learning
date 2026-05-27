@@ -14,3 +14,21 @@ Core Types of Machine Learning:
 Real world examples ;-
 recommnedation system , predictive text & voices (like siri , google assistent etc )
 
+5 Steps of Machine Learning:-
+1.Data Collection: Gathering raw data from diverse sources like databases, APIs, or web scraping. The quality and quantity of this data directly impact the model's eventual accuracy.
+
+2.Data Cleaning and Preprocessing: Refining raw datasets to improve accuracy by handling missing values, removing duplicates, and addressing outliers. This stage also includes "feature engineering," where data is transformed into a format models can better interpret.
+
+3.Model Selection: Choosing the right algorithm (such as Linear Regression, Decision Trees, or Neural Networks) based on the specific problem, such as classification or forecasting.
+
+4.Training and Evaluation: Teaching the model to find patterns by feeding it a subset of the data. Once trained, the model is tested against unseen data to evaluate its performance and tuned for better accuracy.
+
+5.Deployment and Monitoring: Integrating the finalized model into a production environment so it can make real-world predictions. Continuous monitoring is necessary to ensure the model remains accurate as new data comes in.
+
+Why It Matters ??
+Machine learning is the engine driving almost all modern AI innovations. It powers everyday tools like:
+1.Recommendation Algorithms: Curating content feeds on platforms like YouTube or Spotify based on your past behavior.
+2.Generative AI: Powering conversational chatbots that auto-complete sentences, summarize articles, or create new images.
+3.Navigation & Logistics: Estimating travel times and mapping the fastest routes in apps like Google Maps.
+4.Fraud Detection: Notifying banks of unusual credit card activity by spotting spending pattern anomalies.
+
