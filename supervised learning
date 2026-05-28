@@ -1,0 +1,25 @@
+Supervised learning is a machine learning paradigm where an algorithm is trained using labeled data.This means the training set consists of input-output pairs—the algorithm is given "correct answers" so it can learn the mapping function between inputs and their corresponding target values. 
+
+• Classification: Predicts discrete labels or categories.
+(e.g., "Spam" vs. "Not Spam"). 
+• Regression: Predicts continuous numerical values.
+(e.g., house prices or temperature). 
+
+Common Supervised Learning Algorithms :-
+
+• Linear Regression: The simplest algorithm for regression. It finds the best-fitting straight line (relationship) between independent and dependent variables. 
+• Logistic Regression: Despite its name, it is a classification algorithm. It uses a sigmoid function to predict the probability of an input belonging to a specific class (usually binary). 
+• Decision Trees: A tree-like structure where each internal node represents a test on an attribute, and each leaf represents an outcome or class. 
+• Random Forests: An ensemble method that combines multiple decision trees to improve prediction accuracy and control overfitting. 
+• Support Vector Machines (SVM): Finds the optimal boundary (hyperplane) that maximizes the distance between different data classes. 
+• K-Nearest Neighbors (K-NN): A simple, instance-based algorithm that classifies a new data point based on the majority label of its closest neighbors in the training set. 
+• Naive Bayes: A probabilistic classifier based on Bayes' Theorem, assuming independence between every pair of features. 
+• Gradient Boosting (e.g., XGBoost, LightGBM): Builds models sequentially, where each new model attempts to correct the errors of its predecessor. 
+• Neural Networks: Consist of layers of interconnected "neurons" that can learn complex, non-linear relationships; they are the foundation for deep learning. [7, 8, 9, 10, 11]  
+
+Real-World Applications:-
+Organizations use these algorithms to solve problems at scale by leveraging existing historical data: 
+1.Spam Detection: Classifying emails as legitimate or junk. 
+2.Medical Diagnosis: Predicting the likelihood of conditions based on patient history and test results. 
+3.Financial Forecasting: Predicting stock prices, credit scores, or fraudulent transactions. 
+4.Risk Assessment: Calculating the probability of customer churn or equipment failure. 
