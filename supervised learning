@@ -23,3 +23,16 @@ Organizations use these algorithms to solve problems at scale by leveraging exis
 2.Medical Diagnosis: Predicting the likelihood of conditions based on patient history and test results. 
 3.Financial Forecasting: Predicting stock prices, credit scores, or fraudulent transactions. 
 4.Risk Assessment: Calculating the probability of customer churn or equipment failure. 
+
+Self-supervised learning:-
+Labeling data can become prohibitively costly and time-consuming for complex tasks and large datasets. 
+Self-supervised learning entails training on tasks in which a supervisory signal is obtained directly from unlabeled data—hence “self” supervised.
+For instance, autoencoders are trained to compress (or encode) input data, then reconstruct (or decode) the original input using that compressed representation. 
+Their training objective is to minimize reconstruction error, using the original input itself as ground truth. 
+Self-supervised learning is also the primary training method for LLMs: models are provided text samples with certain words hidden or masked and tasked with predicting the missing words.
+Self-supervised learning is frequently associated with transfer learning, as it can provide foundation models with broad capabilities that will then be fine-tuned for more specific tasks.
+
+Semi-supervised learning:-
+Whereas self-supervised learning is essentially supervised learning on unlabeled data, semi-supervised learning methods use both labeled data and unlabeled data. 
+Broadly speaking, semi-supervised learning comprises techniques that use information from the available labeled data to make assumptions about the unlabeled data points so that 
+the latter can be incorporated into supervised learning workflows.
