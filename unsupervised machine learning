@@ -1,0 +1,16 @@
+Unsupervised learning, also known as unsupervised machine learning, uses machine learning (ML) algorithms to analyze and cluster unlabeled data sets. 
+These algorithms discover hidden patterns or data groupings without the need for human intervention.
+
+Unsupervised learning is a type of machine learning where algorithms analyze and discover hidden patterns or structures within unlabeled data without human guidance. 
+Unlike supervised learning, there are no predefined "correct" answers or target outputs; the model learns by identifying inherent similarities, differences, and relationships in the raw data.
+
+The primary types of unsupervised learning algorithms are:-
+1. Clustering AlgorithmsClustering groups data points that share similar characteristics into categories or "clusters".
+K-Means Clustering: Partitioning data into K distinct groups by minimizing the distance between points and their group's center (centroid).
+Hierarchical Clustering: Creating a tree-like hierarchy (dendrogram) of clusters, which can be built from the bottom up (agglomerative) or top-down (divisive).
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise): Grouping points that are closely packed together while marking outliers in low-density regions.
+Gaussian Mixture Models (GMM): A probabilistic approach that assumes data points are generated from a mixture of several Gaussian distributions.
+
+2.Dimensionality Reduction: These techniques simplify complex data by reducing the number of variables (features) while retaining as much essential information as possible.
+Principal Component Analysis (PCA): Transform high-dimensional data into a smaller set of uncorrelated variables called principal components.
+Singular Value Decomposition (SVD): A matrix factorization method used for data compression and noise reduction.
