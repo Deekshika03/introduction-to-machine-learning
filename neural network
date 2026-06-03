@@ -1,0 +1,31 @@
+A neural network is a machine learning model inspired by the way biological neurons work in the brain. 
+It consists of interconnected nodes (neurons) organized into layers that learn patterns from data.
+
+Basic Structure:-
+         Input Layer → Hidden Layer(s) → Output Layer
+Input layer: Receives data (e.g., image pixels, text features).
+Hidden layers: Process information through weighted connections and activation functions.
+Output layer: Produces predictions or classifications.
+
+How It Works
+     Each neuron:
+     Receives inputs.
+     Multiplies them by weights.
+     Adds a bias.
+     Applies an activation function.
+     Passes the result to the next layer.
+
+Learning Process
+     Neural networks learn by:
+     Making predictions.
+     Comparing predictions to actual results using a loss function.
+     Adjusting weights via backpropagation and gradient descent.
+     Repeating this process over many examples.
+Common Types
+     Feedforward Neural Networks (FNN): Basic architecture.
+     Convolutional Neural Networks (CNN): Image recognition.
+     Recurrent Neural Networks (RNN): Sequential data such as text and speech.
+     Transformers: Modern architecture used in large language models like ChatGPT.
+
+
+
