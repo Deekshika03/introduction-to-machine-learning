@@ -27,5 +27,16 @@ Common Types
      Recurrent Neural Networks (RNN): Sequential data such as text and speech.
      Transformers: Modern architecture used in large language models like ChatGPT.
 
-
+Applications:
+  Image recognition
+  Natural language processing
+  Speech recognition
+  Recommendation systems
+  Medical diagnosis
+  Autonomous vehicles
+Simple Example:
+  Suppose a network learns to distinguish cats from dogs:
+  Input: image pixels
+  Hidden layers: detect edges, shapes, ears, fur patterns
+  Output: "cat" or "dog"
 
