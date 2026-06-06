@@ -1,0 +1,9 @@
+An evaluation model is a structured framework used to measure the performance, accuracy, and overall effectiveness of a process, program, or system.
+The specific type of model you use depends on your core focus: machine learning, training programs,or general project management
+
+1. Machine Learning & AIIn data science, model evaluation is the process of assessing how well an algorithm performs on unseen data to ensure it generalizes well.
+Classification Metrics: Used for predicting distinct categories. 
+Common metrics include Accuracy (correct predictions), Precision (true positives among all positive predictions), and the F1 Score.Regression Metrics: Used for predicting continuous numerical values. 
+Common metrics include Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).
+Evaluation Techniques: Frameworks like Cross-Validation partition data into training and test sets to prevent overfitting.
+
