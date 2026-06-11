@@ -7,3 +7,9 @@ Common metrics include Accuracy (correct predictions), Precision (true positives
 Common metrics include Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).
 Evaluation Techniques: Frameworks like Cross-Validation partition data into training and test sets to prevent overfitting.
 
+Key Evaluation Approaches
+Before calculating metrics, you must split your data to ensure the model is tested on information it did not see during training. 
+Common techniques include:
+Train-Test Split: Randomly dividing the dataset (e.g., 80% for training and 20% for testing) to provide a single, straightforward evaluation.
+Cross-Validation: Splitting the data into multiple subsets (or folds), training the model on some and testing it on others. 
+This technique reduces overfitting and guarantees a more robust evaluation
