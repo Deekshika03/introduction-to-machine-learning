@@ -1,0 +1,13 @@
+A Support Vector Machine (SVM) is a supervised machine learning algorithm used for classification, regression, and outlier detection. 
+  It finds the best boundary, called a hyperplane, to separate data points into different classes.
+  
+  Key Concepts
+  Hyperplane: The decision boundary that separates different classes in a data space.
+  Support Vectors: The data points closest to the hyperplane that define the margin and position of the boundary.
+  Margin: The distance between the hyperplane and the closest support vectors from each class, which SVM aims to maximize.
+  Kernel Trick: A function used to transform non-linearly separable data into a higher-dimensional space where a linear boundary can be applied.
+    
+  Types and KernelsLinear SVM: 
+    It Used when data can be separated cleanly by a straight line or flat plane.
+    Non-Linear SVM: Uses kernel functions (such as Polynomial or Radial Basis Function/RBF) to handle complex data shapes.
+    Soft Margin: Allows some misclassification errors to handle noisy data and outliers effectively.
