@@ -1,10 +1,20 @@
-# Experiment: Self-Organizing Map (SOM)
+# ==========================================================
+# EXPERIMENT: SELF-ORGANIZING MAP (SOM)
 # Clustering and Visualization of Digits Dataset
+# ==========================================================
 
-# Install MiniSom if required
-# !pip install minisom
+# ----------------------------------------------------------
+# 1. Install MiniSom
+# ----------------------------------------------------------
 
-# 1. Import Libraries
+import sys
+!{sys.executable} -m pip install minisom -q
+
+
+# ----------------------------------------------------------
+# 2. Import Libraries
+# ----------------------------------------------------------
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -16,7 +26,10 @@ from sklearn.metrics import silhouette_score
 from minisom import MiniSom
 
 
-# 2. Load Digits Dataset
+# ----------------------------------------------------------
+# 3. Load Digits Dataset
+# ----------------------------------------------------------
+
 digits = load_digits()
 
 X = digits.data
@@ -26,12 +39,21 @@ print("Number of Samples:", X.shape[0])
 print("Number of Features:", X.shape[1])
 
 
-# 3. Normalize the Data
+# ----------------------------------------------------------
+# 4. Normalize the Data
+# ----------------------------------------------------------
+
 scaler = MinMaxScaler()
+
 X_scaled = scaler.fit_transform(X)
 
+print("Data Normalization Completed")
 
-# 4. Initialize SOM
+
+# ----------------------------------------------------------
+# 5. Initialize SOM
+# ----------------------------------------------------------
+
 som = MiniSom(
     x=10,
     y=10,
@@ -44,8 +66,13 @@ som = MiniSom(
 # Initialize weights
 som.random_weights_init(X_scaled)
 
+print("SOM Initialized")
 
-# 5. Train the SOM
+
+# ----------------------------------------------------------
+# 6. Train SOM
+# ----------------------------------------------------------
+
 som.train_random(
     X_scaled,
     10000
@@ -54,33 +81,57 @@ som.train_random(
 print("SOM Training Completed")
 
 
-# 6. Find Best Matching Unit (BMU)
+# ----------------------------------------------------------
+# 7. Find Best Matching Unit (BMU)
+# ----------------------------------------------------------
+
 bmu_positions = []
 
 for sample in X_scaled:
+
     bmu = som.winner(sample)
+
     bmu_positions.append(bmu)
 
 bmu_positions = np.array(bmu_positions)
 
 
-# 7. Assign Cluster Labels
+print("\nFirst 5 BMU Positions:")
+print(bmu_positions[:5])
+
+
+# ----------------------------------------------------------
+# 8. Create Cluster Labels
+# ----------------------------------------------------------
+
 cluster_labels = (
     bmu_positions[:, 0] * 10
     + bmu_positions[:, 1]
 )
 
+print("\nNumber of SOM Clusters:",
+      len(np.unique(cluster_labels)))
 
-# 8. Calculate Silhouette Score
+
+# ----------------------------------------------------------
+# 9. Silhouette Score
+# ----------------------------------------------------------
+
 if len(np.unique(cluster_labels)) > 1:
+
     score = silhouette_score(
         X_scaled,
         cluster_labels
     )
-    print("Silhouette Score:", round(score, 4))
+
+    print("Silhouette Score:",
+          round(score, 4))
 
 
-# 9. Plot SOM Distance Map
+# ----------------------------------------------------------
+# 10. Plot SOM Distance Map
+# ----------------------------------------------------------
+
 plt.figure(figsize=(8, 8))
 
 plt.pcolor(
@@ -91,13 +142,17 @@ plt.pcolor(
 plt.colorbar(label="Distance")
 
 plt.title("SOM Distance Map")
+
 plt.xlabel("SOM X Coordinate")
 plt.ylabel("SOM Y Coordinate")
 
 plt.show()
 
 
-# 10. Visualize Digits on SOM
+# ----------------------------------------------------------
+# 11. Visualize Digits on SOM
+# ----------------------------------------------------------
+
 plt.figure(figsize=(8, 8))
 
 plt.pcolor(
@@ -112,9 +167,9 @@ markers = [
     '<', '>', 'p', '*', 'h'
 ]
 
-for i, sample in enumerate(X_scaled):
+for i in range(len(X_scaled)):
 
-    x_pos, y_pos = som.winner(sample)
+    x_pos, y_pos = som.winner(X_scaled[i])
 
     plt.plot(
         x_pos + 0.5,
@@ -126,13 +181,17 @@ for i, sample in enumerate(X_scaled):
     )
 
 plt.title("Digits Distribution on SOM")
+
 plt.xlabel("SOM X Coordinate")
 plt.ylabel("SOM Y Coordinate")
 
 plt.show()
 
 
-# 11. Create Result Table
+# ----------------------------------------------------------
+# 12. Create Result Table
+# ----------------------------------------------------------
+
 result = pd.DataFrame({
     "Actual Digit": y,
     "BMU X": bmu_positions[:, 0],
@@ -140,5 +199,11 @@ result = pd.DataFrame({
     "Cluster Label": cluster_labels
 })
 
+
+# ----------------------------------------------------------
+# 13. Display Results
+# ----------------------------------------------------------
+
 print("\nSample Results:")
+
 print(result.head(10))
